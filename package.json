@@ -1,0 +1,23 @@
+{
+  "name": "bgm-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Michelle Williams",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "l": "^0.6.0",
+    "nodemon": "^2.0.20"
+  }
+}
