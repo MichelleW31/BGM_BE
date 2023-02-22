@@ -8,6 +8,8 @@ const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
 const PORT = process.env.PORT || 3500;
 const userController = require("./controllers/userController");
+const registerController = require("./controllers/registerController");
+const authController = require("./controllers/authController");
 
 //Log middleware calls
 app.use(logger);
@@ -35,6 +37,14 @@ app.get("/user", (req, res) => {
 
 app.post("/signup", (req, res) => {
   userController.createNewUser(req, res);
+});
+
+app.post("/register", (req, res) => {
+  registerController.handleNewUser(req, res);
+});
+
+app.post("/auth", (req, res) => {
+  authController.handleLogin(req, res);
 });
 
 //Error Handler

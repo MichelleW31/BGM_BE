@@ -1,5 +1,6 @@
 const usersDB = {
   users: require("../model/users.json"),
+  //   users: require("../model/User"),
   setUsers: function (data) {
     this.users = data;
   },
@@ -36,16 +37,19 @@ const handleNewUser = async (req, res) => {
 
     usersDB.setUsers([...usersDB.users, newUser]);
 
-    //THis is where you will be writing to the database
+    //This is where you will be writing to the database
     //Delete this once you connect to the database
     await fsPromises.writeFile(
-      path.join(___dirname, "..", "model", "users.json"),
+      path.join(__dirname, "../model", "users.json"),
       JSON.stringify(usersDB.users)
     );
 
     console.log(usersDB.users);
-    res.status(201).jsson({ success: `New user ${user} created!` });
+
+    res.status(201).json({ success: `New user ${username} created!` }); //Successful
   } catch (error) {
     res.status(500).json({ message: error.message }); //Server error code
   }
 };
+
+module.exports = { handleNewUser };
