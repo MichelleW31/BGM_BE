@@ -3,3 +3,4 @@
 20230221	13:45:19	91b204c6-b629-420c-8747-932fb2455e5a	TypeError: Cannot read property 'body' of undefined
 20230221	13:45:30	9a04752d-5b4d-4094-b24a-d7c98b2e7f7f	TypeError: Cannot read property 'body' of undefined
 20230221	13:45:31	f75ceba1-70d8-4e24-b275-b36c9d878bbf	TypeError: Cannot read property 'body' of undefined
+20230227	09:07:10	6b606ecc-c488-426e-afb8-73cc62f0b780	TypeError: next is not a function

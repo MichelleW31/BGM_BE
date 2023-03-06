@@ -1,13 +1,23 @@
+const usersDB = {
+  users: require("../model/users.json"),
+  //   users: require("../model/User"),
+  setUsers: function (data) {
+    this.users = data;
+  },
+};
+
 const getUser = (req, res) => {
-  // const user = users.find((user) => user.id === parseInt(req.params.id));
+  const user = usersDB.users.find(
+    (user) => user.id === parseInt(req.params.id)
+  );
 
-  // if (!user) {
-  //   return res
-  //     .status(400)
-  //     .json({ message: `Employee ID ${req.params.id} not found` });
-  // }
+  if (!user) {
+    return res
+      .status(400)
+      .json({ message: `User ID ${req.params.id} not found` });
+  }
 
-  // res.json(user);
+  res.json(user);
   console.log("user retrieved");
 };
 

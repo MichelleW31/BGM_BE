@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3500;
 const userController = require("./controllers/userController");
 const registerController = require("./controllers/registerController");
 const authController = require("./controllers/authController");
+const verifyJWT = require("./middleware/verifyJWT");
 
 //Log middleware calls
 app.use(logger);
@@ -32,10 +33,12 @@ app.get("^/$|/index.html/", (req, res) => {
 });
 
 app.get("/user", (req, res) => {
+  verifyJWT(req, res);
   userController.getUser(req, res);
 });
 
 app.post("/signup", (req, res) => {
+  verifyJWT(req, res);
   userController.createNewUser(req, res);
 });
 
