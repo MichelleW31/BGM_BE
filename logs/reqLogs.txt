@@ -100,3 +100,11 @@
 20230227	08:47:25	caeb4147-4c03-4200-b206-92413d684a9e	POST	undefined	/auth
 20230227	09:06:59	e49435f6-f8de-4263-a4f2-c8567291ef1a	POST	undefined	/auth
 20230227	09:07:10	396e803e-1a1c-45b5-a650-4168f8725931	GET	undefined	/user
+20230319	14:40:34	ba692d2d-2739-46ad-8d6b-75ddcd74b509	GET	undefined	/
+20230319	14:40:34	423d756a-aabd-4d9b-99c4-da6c0ea527e7	GET	undefined	/favicon.ico
+20230319	14:41:04	673559fb-c5fd-4f9b-9cc2-1348884a3d5e	GET	undefined	/
+20230319	14:41:16	3bf326bf-6be4-4d58-bf67-4afecbafa377	GET	undefined	/
+20230319	14:42:36	3257811b-f2da-42b3-99c5-7de39e24289f	GET	undefined	/
+20230319	14:42:36	a823ddbb-5404-46fb-8012-ae99e9e7cab8	GET	undefined	/static/js/main.7b8ef339.js
+20230319	14:42:36	a474ddeb-e4f9-4616-b967-3181f0f0c4af	GET	undefined	/static/css/main.4ed64dc0.css
+20230319	14:42:36	babdf344-7c7b-417b-bab2-3043de9b724f	GET	undefined	/static/media/bgm_bank.e65659529e2094110b8e.jpg

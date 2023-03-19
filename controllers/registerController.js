@@ -8,7 +8,7 @@ const usersDB = {
 
 const fsPromises = require("fs").promises;
 const path = require("path");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const handleNewUser = async (req, res) => {
   const { username, password } = req.body;

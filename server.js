@@ -19,7 +19,7 @@ app.use(logger);
 app.use(cors(corsOptions));
 
 //Serve static files
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+app.use(express.static(path.join(__dirname, "../BGM_FE/build")));
 
 //Built in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
@@ -29,7 +29,7 @@ app.use(express.json());
 
 //API CALLS
 app.get("^/$|/index.html/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+  res.sendFile(path.join(__dirname, "../BGM_FE/build", "index.html"));
 });
 
 app.get("/user", (req, res) => {
