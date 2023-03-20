@@ -5,7 +5,7 @@ const verifyJWT = (req, res, next) => {
   const authHeader = req.headers["authorization"];
 
   if (!authHeader) {
-    return res.sendStatus("401"); //Unauthorized
+    return res.sendStatus(401); //Unauthorized
   }
 
   console.log(authHeader); // Bearer token
@@ -17,7 +17,7 @@ const verifyJWT = (req, res, next) => {
     }
 
     req.user = decoded.username;
-    next();
+    // next();
   });
 };
 

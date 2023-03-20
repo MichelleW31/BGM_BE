@@ -44,10 +44,11 @@ const handleNewUser = async (req, res) => {
       JSON.stringify(usersDB.users)
     );
 
-    console.log(usersDB.users);
+    // console.log(usersDB.users);
 
     res.status(201).json({ success: `New user ${username} created!` }); //Successful
   } catch (error) {
+    console.log("error", error.message);
     res.status(500).json({ message: error.message }); //Server error code
   }
 };

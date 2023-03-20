@@ -21,21 +21,25 @@ const getUser = (req, res) => {
   console.log("user retrieved");
 };
 
-const createNewUser = (req, res) => {
-  const newUser = {
-    id: 1,
-    username: req.body.username,
-    password: req.body.password,
-  };
-
-  if (!newUser.username || !newUser.password) {
-    return res
-      .status(400)
-      .json({ message: "Username and password are required" });
-  }
-
-  res.send(newUser);
-  console.log("new user created", newUser);
+const getUsers = (req, res) => {
+  res.json(usersDB.users);
 };
 
-module.exports = { getUser, createNewUser };
+// const createNewUser = (req, res) => {
+//   const newUser = {
+//     id: 1,
+//     username: req.body.username,
+//     password: req.body.password,
+//   };
+
+//   if (!newUser.username || !newUser.password) {
+//     return res
+//       .status(400)
+//       .json({ message: "Username and password are required" });
+//   }
+
+//   res.send(newUser);
+//   console.log("new user created", newUser);
+// };
+
+module.exports = { getUser, getUsers };
