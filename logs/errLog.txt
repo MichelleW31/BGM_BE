@@ -9,3 +9,11 @@
 20230319	14:41:16	b5b7f8ff-d1ec-41e6-a653-a1064d1262aa	Error: ENOENT: no such file or directory, stat '/Users/michellewilliams/Desktop/BGM/BGM_FE/build/index.html'
 20230319	17:18:30	d9ac4a7f-8242-43ed-88b2-3a51c2531be9	SyntaxError: Unexpected token u in JSON at position 4
 20230319	17:45:18	6afebe1a-846c-4e1f-8da3-b227f602ceef	TypeError: next is not a function
+20230319	18:05:30	9db4cc30-5bdf-40ee-8e40-c2d0db741f22	Error: Cannot set headers after they are sent to the client
+20230321	10:18:37	61a65896-3541-4e75-a265-b04d51bfe3f7	Error: Cannot set headers after they are sent to the client
+20230321	10:27:23	7d1295a3-ed94-4c11-bbb8-6e7ef4e64a43	Error: Cannot set headers after they are sent to the client
+20230321	10:41:01	300814c3-7c13-43cf-a387-26d1901c4ce5	Error: Cannot set headers after they are sent to the client
+20230321	11:03:10	1a8da728-d4dd-4508-a71e-56e30280c662	Error: Cannot set headers after they are sent to the client
+20230321	11:03:59	ff5cb8b7-c757-4541-9521-923eb7624ed2	Error: Cannot set headers after they are sent to the client
+20230321	11:07:30	a7164520-b005-4f0a-965a-03f6bfdf00c1	Error: Cannot set headers after they are sent to the client
+20230321	11:10:17	c34e7370-c8b7-4f18-8a31-078c597d1d72	Error: Cannot set headers after they are sent to the client

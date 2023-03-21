@@ -32,18 +32,20 @@ app.get("^/$|/index.html/", (req, res) => {
   res.sendFile(path.join(__dirname, "../BGM_FE/build", "index.html"));
 });
 
+//Signup
 app.post("/register", (req, res) => {
   registerController.handleNewUser(req, res);
 });
 
+//Login
+app.post("/auth", (req, res) => {
+  authController.handleLogin(req, res);
+});
+
+//Get users
 app.get("/users", (req, res) => {
   verifyJWT(req, res);
   userController.getUsers(req, res);
-});
-
-//This is being used as the login for now
-app.post("/auth", (req, res) => {
-  authController.handleLogin(req, res);
 });
 
 //Error Handler
