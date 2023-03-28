@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3500;
 const userController = require("./controllers/userController");
 const registerController = require("./controllers/registerController");
 const authController = require("./controllers/authController");
+const refreshTokenController = require("./controllers/refreshTokenController");
+const cookieParser = require("cookie-parser");
 const verifyJWT = require("./middleware/verifyJWT");
 
 //Log middleware calls
@@ -27,6 +29,9 @@ app.use(express.urlencoded({ extended: false }));
 //Built in middleware for json
 app.use(express.json());
 
+//Middleware for cookies
+app.use(cookieParser());
+
 //API CALLS
 app.get("^/$|/index.html/", (req, res) => {
   res.sendFile(path.join(__dirname, "../BGM_FE/build", "index.html"));
@@ -40,6 +45,11 @@ app.post("/register", (req, res) => {
 //Login
 app.post("/auth", (req, res) => {
   authController.handleLogin(req, res);
+});
+
+//Refresh token controller
+app.get("/refresh_token", (req, res) => {
+  refreshTokenController.handleRefreshToken(req, res);
 });
 
 //Get users

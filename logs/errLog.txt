@@ -17,3 +17,5 @@
 20230321	11:03:59	ff5cb8b7-c757-4541-9521-923eb7624ed2	Error: Cannot set headers after they are sent to the client
 20230321	11:07:30	a7164520-b005-4f0a-965a-03f6bfdf00c1	Error: Cannot set headers after they are sent to the client
 20230321	11:10:17	c34e7370-c8b7-4f18-8a31-078c597d1d72	Error: Cannot set headers after they are sent to the client
+20230327	19:01:15	e8e0d9b3-ff22-4bcf-9b14-b9bff0e73486	ReferenceError: error is not defined
+20230327	19:01:51	0d7aadad-bb68-4e83-9c62-645bc7bd24e8	ReferenceError: error is not defined
