@@ -19,3 +19,17 @@
 20230321	11:10:17	c34e7370-c8b7-4f18-8a31-078c597d1d72	Error: Cannot set headers after they are sent to the client
 20230327	19:01:15	e8e0d9b3-ff22-4bcf-9b14-b9bff0e73486	ReferenceError: error is not defined
 20230327	19:01:51	0d7aadad-bb68-4e83-9c62-645bc7bd24e8	ReferenceError: error is not defined
+20230418	10:25:56	7818d4fa-c08e-4b27-8764-a758fed00f36	TypeError: authHeader?.startWith is not a function
+20230418	10:26:12	c0bbf474-d0ef-457e-a3c9-cf9e085f2953	TypeError: authHeader?.startWith is not a function
+20230418	10:26:45	f9e11d46-a6b6-410c-9964-9adb79652956	TypeError: authHeader?.startWith is not a function
+20230418	10:27:50	4bfa8aa7-941b-4d30-995d-2e8919cf9162	TypeError: authHeader?.startWith is not a function
+20230418	10:29:03	6bf0e930-1e03-48e6-85d0-658b60d818f7	TypeError: authHeader?.startWith is not a function
+20230418	10:30:07	a2d357a4-4313-46f9-bd7d-f55e27cc8c0c	TypeError: authHeader?.startWith is not a function
+20230418	10:31:22	f247f0e9-44b9-4927-a267-43a535910a4b	TypeError: authHeader?.startWith is not a function
+20230418	10:31:54	aacefb44-718f-4072-a607-ff39b77a5c7c	TypeError: authHeader?.startWith is not a function
+20230418	10:32:59	3b76b6ea-7837-4cda-93f8-9a689c9cf204	TypeError: authHeader?.startWith is not a function
+20230418	10:34:21	49603245-0ba4-40be-8fbe-d26bcca25162	TypeError: authHeader?.startWith is not a function
+20230418	11:50:54	76d2e5a5-accb-4872-855d-82f5cac6010f	Error: Cannot set headers after they are sent to the client
+20230418	11:58:08	760acebc-5c27-4e40-9824-7ae86dbdda67	TypeError: number 5150 is not iterable (cannot read property Symbol(Symbol.iterator))
+20230418	12:07:11	5037b48b-0362-4ffd-a32e-9fcc9abe8848	Error: Cannot set headers after they are sent to the client
+20230418	12:09:59	58813a36-1748-464c-80e5-bfa05cdce7ed	Error: Cannot set headers after they are sent to the client

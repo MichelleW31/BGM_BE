@@ -33,8 +33,15 @@ const handleRefreshToken = (req, res) => {
       return res.sendStatus(403); //Forbidden
     }
 
+    const roles = Object.values(foundUser.roles);
+
     const accessToken = jwt.sign(
-      { username: decoded.username },
+      {
+        UserInfo: {
+          username: foundUser.username,
+          roles: roles,
+        },
+      },
       process.env.ACCESS_TOKEN_SECRET,
       { expiresIn: "30s" }
     );

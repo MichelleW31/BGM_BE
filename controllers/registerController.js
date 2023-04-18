@@ -10,6 +10,7 @@ const fsPromises = require("fs").promises;
 const path = require("path");
 const bcrypt = require("bcryptjs");
 
+//New user created
 const handleNewUser = async (req, res) => {
   const { username, password } = req.body;
 
@@ -32,6 +33,7 @@ const handleNewUser = async (req, res) => {
     //store the new user
     const newUser = {
       username: username,
+      roles: { User: 2001 },
       password: hashedPassword,
     };
 
