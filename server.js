@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -17,6 +18,10 @@ const verifyJWT = require("./middleware/verifyJWT");
 const credentials = require("./middleware/credentials");
 const ROLES_LIST = require("./config/roles_list");
 const verifyRoles = require("./middleware/verifyRoles");
+const connectDB = require("./config/dbConn");
+
+// Connect to DB
+connectDB();
 
 //Log middleware calls
 app.use(logger);
@@ -64,19 +69,37 @@ app.get("/refresh_token", (req, res) => {
   refreshTokenController.handleRefreshToken(req, res);
 });
 
-//Get users
+//////USER ROUTES - MOVE TO ROUTES FILE//////
 app.get("/users", (req, res) => {
   verifyJWT(req, res);
   verifyRoles(req, res, ROLES_LIST.Admin);
   userController.getUsers(req, res);
 });
 
-//Need to add put to update users
-//Need to add delete to delete users
+app.put("/users", (req, res) => {
+  verifyJWT(req, res);
+  verifyRoles(req, res, ROLES_LIST.Admin, ROLES_LIST.Editor);
+  userController.updateUser(req, res);
+});
+
+app.delete("/users", (req, res) => {
+  verifyJWT(req, res);
+  verifyRoles(req, res, ROLES_LIST.Admin);
+  userController.deleteUser(req, res);
+});
+
+app.get("/users/:id", (req, res) => {
+  verifyJWT(req, res);
+  userController.getUser(req, res);
+});
 
 //Error Handler
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`App running on ${PORT}`);
+mongoose.connection.once("open", () => {
+  console.log("Connected to DB");
+
+  app.listen(PORT, () => {
+    console.log(`App running on ${PORT}`);
+  });
 });

@@ -1,17 +1,7 @@
-const usersDB = {
-  users: require("../model/users.json"),
-  //   users: require("../model/User"),
-  setUsers: function (data) {
-    this.users = data;
-  },
-};
+const User = require("../model/User");
 
 const bcrypt = require("bcryptjs");
-
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
-const fsPromises = require("fs").promises;
-const path = require("path");
 
 const handleLogin = async (req, res) => {
   const { username, password } = req.body;
@@ -23,7 +13,7 @@ const handleLogin = async (req, res) => {
   }
 
   //Look for user.
-  const foundUser = usersDB.users.find((user) => user.username === username);
+  const foundUser = await User.findOne({ username }).exec();
 
   if (!foundUser) {
     return res.sendStatus(401); //Unauthorized User
@@ -57,22 +47,16 @@ const handleLogin = async (req, res) => {
 
     // Saving refreshToken with current user
     // We can invalidate the refresh token when the user logs out before 1 day has passed
-    const otherUsers = usersDB.users.filter(
-      (user) => user.username !== foundUser.username
-    );
-    const currentUser = { ...foundUser, refreshToken };
-    usersDB.setUsers([...otherUsers, currentUser]);
-
-    await fsPromises.writeFile(
-      path.join(__dirname, "../model", "users.json"),
-      JSON.stringify(usersDB.users)
-    );
+    foundUser.refreshToken = refreshToken;
+    const result = await foundUser.save();
+    console.log(result);
 
     res.cookie("jwt", refreshToken, {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000,
       sameSite: "None",
-      secure: true,
+      // Add back in when pushing to production. This blocks Thunderclient testing
+      // secure: true,
     });
     res.json({ accessToken });
   } else {

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -9,9 +9,10 @@ const userSchema = new Schema({
   roles: {
     User: {
       type: Number,
-      default: 1991,
+      default: 2001,
     },
     Admin: Number,
+    Editor: Number,
   },
   password: {
     type: String,
@@ -20,4 +21,4 @@ const userSchema = new Schema({
   refreshToken: String,
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model("User", userSchema);

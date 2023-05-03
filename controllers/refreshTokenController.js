@@ -1,16 +1,11 @@
-const usersDB = {
-  users: require("../model/users.json"),
-  //   users: require("../model/User"),
-  setUsers: function (data) {
-    this.users = data;
-  },
-};
+const User = require("../model/User");
 
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
-const handleRefreshToken = (req, res) => {
+const handleRefreshToken = async (req, res) => {
   const cookies = req.cookies;
+
+  console.log("cookies", cookies);
 
   if (!cookies?.jwt) {
     return res.sendStatus(401); //Unauthorized User
@@ -19,9 +14,7 @@ const handleRefreshToken = (req, res) => {
   const refreshToken = cookies.jwt;
 
   //Look for user.
-  const foundUser = usersDB.users.find(
-    (user) => user.refreshToken === refreshToken
-  );
+  const foundUser = await User.findOne({ refreshToken }).exec();
 
   if (!foundUser) {
     return res.sendStatus(403); //Forbidden
