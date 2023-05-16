@@ -16,6 +16,3 @@ router
 router.route("/:id").get(userController.getUser);
 
 module.exports = router;
-// {"username": "MichelleW31", "password": "MichelleW31"}
-// {"id": "6463c415db27f012c3156738", "username": "Michelle3121"}
-// {"id": "6463c415db27f012c3156738"}
