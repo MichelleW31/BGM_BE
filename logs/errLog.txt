@@ -34,3 +34,4 @@
 20230418	12:07:11	5037b48b-0362-4ffd-a32e-9fcc9abe8848	Error: Cannot set headers after they are sent to the client
 20230418	12:09:59	58813a36-1748-464c-80e5-bfa05cdce7ed	Error: Cannot set headers after they are sent to the client
 20230418	17:47:03	109a70a0-0dd3-4447-950e-f48dfab2929a	Error: Cannot set headers after they are sent to the client
+20230516	10:48:57	9c8a863f-af11-48e3-826b-27a5a294f0bf	TypeError: Cannot read properties of undefined (reading 'split')
