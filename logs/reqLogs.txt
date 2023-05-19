@@ -457,3 +457,8 @@
 20230516	11:29:00	5990e134-db16-4ba5-8028-0e183ee15ff0	DELETE	undefined	/users
 20230516	11:29:03	fb70ebf6-7601-4e61-aa3e-c2c14dcaeedb	POST	undefined	/auth
 20230516	11:29:13	3491fe80-961f-4ffc-a683-3e5a1d5ddc0d	DELETE	undefined	/users
+20230516	11:35:49	93c147bd-77ce-44e4-9d88-f45b9e576256	GET	undefined	/
+20230516	11:35:49	a47ed88e-9921-4eca-a401-6561b050eba0	GET	undefined	/static/js/main.7b8ef339.js
+20230516	11:35:49	a7f8bbba-f088-4a25-865e-9350d6b33101	GET	undefined	/static/css/main.4ed64dc0.css
+20230516	11:35:49	e88b4c53-4362-4c9d-8ee3-2b9bc334a153	GET	undefined	/static/media/bgm_bank.e65659529e2094110b8e.jpg
+20230516	11:35:49	ffa6f7fe-8b7f-4ecf-a373-8e7a2566b395	GET	undefined	/favicon.ico
